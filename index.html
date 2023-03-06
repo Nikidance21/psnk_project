@@ -32,12 +32,19 @@
             </ul>
             <p></p>
             <div v-for="variant in variants" :key="variant.variantId">
-                <p>{{ variant.variantColor }}</p>
+                <p @mouseover="updateProduct(variant.variantImage)">
+                    {{ variant.variantColor }}
+                </p>
             </div>
             <p v-else-if="invertory <= 10 && invertory > 0">Almost sold out</p>
             <p v-else>="Out of stock</p>
-            <span v-if="onSale">On Sale!</span><br>
-            <a :href="link">More products like this</a>
+            <a :href="link">More products like this</a><br>
+            <div class="cart">
+                <p>Cart({{ cart }})</p>
+            </div>
+            <button v-on:click="addToCart">Add to cart</button>
+            <button @click="removeFromCart">Remove from cart</button>
+
         </div>
 
     </div>
