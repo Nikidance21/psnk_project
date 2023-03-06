@@ -5,7 +5,7 @@ body {
 }
 
 .nav-bar {
-    background: linear-gradient(-90deg, #84CF6A, #16C0B0);
+    background: linear-gradient(-90deg,#28c29c, #2f4a88);
     height: 60px;
     margin-bottom: 15px;
 }
@@ -52,8 +52,10 @@ button {
     background-color: #1E95EA;
     color: white;
     height: 40px;
-    width: 100px;
+    width: 160px;
     font-size: 14px;
+    margin-right:15px;
+
 }
 
 .disabledButton {
@@ -86,4 +88,8 @@ textarea {
 .activeTab {
     color: #16C0B0;
     text-decoration: underline;
+}
+
+.outOfStock {
+    text-decoration: line-through;
 }
